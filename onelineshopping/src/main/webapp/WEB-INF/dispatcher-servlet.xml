@@ -29,7 +29,7 @@
 	<!-- Loading static resources -->
 	
 	<mvc:annotation-driven />
-	<mvc:resources mapping="/resources/**" location="/assests/"  />
+	<mvc:resources mapping="/resources/**" location="/assets/"  />
 	<mvc:default-servlet-handler />
 
 
