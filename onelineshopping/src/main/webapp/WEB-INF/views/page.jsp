@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page isELIgnored="false"%>
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
+
+<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 
 <!DOCTYPE html>
@@ -18,7 +21,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Shop Homepage - Start Bootstrap Template</title>
+<title>Online Shopping - ${title}</title>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -28,13 +31,21 @@
 
 </head>
 
-<body>  
-
+<body>
+ 
+   
 	<!-- Navigation -->
 	<%@include file="./shared/navbar.jsp"%>
 
 	<!-- Page Content -->
-	<%@include file="home.jsp"%>
+	<c:if test="${userClickHome == true }">
+		<%@include file="home.jsp"%>
+	</c:if>
+	
+	<c:if test="${userClickAbout == true }">
+		<%@include file="about.jsp"%>
+	</c:if>
+
 	<!-- /.container -->
 
 	<!-- Footer -->

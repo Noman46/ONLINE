@@ -10,11 +10,20 @@ public class PageController {
 	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index() {		
 		ModelAndView mv = new ModelAndView("page");		
-		
-		
-		
-		mv.addObject("msg","Ja mon Chay ta");
+		//mv.addObject("msg","Whatever you want");
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome", true);
 		return mv;				
 	}
+	
+	@RequestMapping(value = {"/about"})
+	public ModelAndView about() {		
+		ModelAndView mv = new ModelAndView("page");		
+		//mv.addObject("title","About");
+		mv.addObject("userClickAbout", true);
+		return mv;				
+	}
+	
+	
 	
 }
