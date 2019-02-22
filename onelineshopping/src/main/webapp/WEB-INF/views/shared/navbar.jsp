@@ -21,7 +21,7 @@
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="${contextRoot}/about">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="">View Product</a>
+				<li class="nav-item"><a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="https://noman46.github.io/" target="_blank">Contact Me</a></li>
 			</ul>

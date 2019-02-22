@@ -31,6 +31,19 @@ public class PageController {
 		return mv;				
 	}
 	
+	/*
+	 * Method to display All products and based on category
+	 * */
+	
+	@RequestMapping(value = {"/show/all/products"})
+	public ModelAndView showAllProducts() {     
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("categories", categoryDAO.list());
+		mv.addObject("title","All Products");
+		mv.addObject("userClickViewProducts", true);
+		return mv;
+	}
+	
 	
 	
 }
