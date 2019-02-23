@@ -46,7 +46,7 @@
 		<%@include file="about.jsp"%>
 	</c:if>
 	
-	<c:if test="${userClickViewProducts == true }">
+	<c:if test="${userClickViewProducts == true or userClickCategoryProducts == true}">
 		<%@include file="listproducts.jsp"%>
 	</c:if>
 

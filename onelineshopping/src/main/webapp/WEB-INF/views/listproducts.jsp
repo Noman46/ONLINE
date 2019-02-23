@@ -11,12 +11,21 @@
 			<div class="row">
 				<div class="col-lg-12">
 
-					<ol class="breadcrumb">
-						<li><a href="${contextRoot}/home">Home</a></li>
-						&nbsp&nbsp&nbsp
-						<li class="active">All Products</a></li>
+					<c:if test="${userClickViewProducts == true}">
+						<ol class="breadcrumb">
+							<li><a href="${contextRoot}/home">Home</a></li> &nbsp&nbsp&nbsp
+							<li class="active">All Products</li>
+						</ol>
 
-					</ol>
+					</c:if>
+					<c:if test="${userClickCategoryProducts == true}">
+						<ol class="breadcrumb">
+							<li><a href="${contextRoot}/home">Home</a></li> &nbsp&nbsp&nbsp
+							<li class="active">${category.name}</li>
+						</ol>
+					</c:if>
+
+
 
 				</div>
 
